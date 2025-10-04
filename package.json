@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
-    "start": "npm run start --prefix backend"
+    "start": "npm run start --prefix backend",
+    "audit-all": "npm audit && cd frontend && npm audit && cd ../backend && npm audit",
+    "audit-fix-all": "npm audit fix && cd frontend && npm audit fix && cd ../backend && npm audit fix"
   },
   "keywords": [],
   "author": "",
