@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
-    "start": "npm run start --prefix backend",
+    "build": "npm --prefix frontend ci && npm --prefix frontend run build && npm --prefix backend ci",
+    "start": "npm --prefix backend start",
     "audit-all": "npm audit && cd frontend && npm audit && cd ../backend && npm audit",
     "audit-fix-all": "npm audit fix && cd frontend && npm audit fix && cd ../backend && npm audit fix"
   },
